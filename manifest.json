@@ -1,0 +1,8 @@
+{
+  "version": "0.1.0",
+  "url": "https://github.com/Devallix/SecureVaultPro/raw/refs/heads/main/manifest.json",
+  "sha256": "1e9874c30ecc01b920d5c0217ba45a60d809994a0180bf52c42cba6fa5b64b2d",
+  "size_bytes": 72932374,
+  "notes": "Built-in updater: check, download, verify, swap install with rollback",
+  "published_at": "2026-10-30 18:38:40"
+}

@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=75.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "securevault-pro"
+version = "0.1.0"
+description = "Enterprise File Encryption & Password Management Desktop Application"
+readme = "README.md"
+license = {text = "Proprietary"}
+requires-python = ">=3.13"
+authors = [
+    {name = "SecureVault Team"}
+]
+dependencies = [
+    "PySide6>=6.11.0",
+    "SQLAlchemy>=2.0.50",
+    "Alembic>=1.18.0",
+    "cryptography>=49.0.0",
+    "argon2-cffi>=25.1.0",
+    "PyNaCl>=1.6.0",
+    "loguru>=0.7.0",
+    "pyperclip>=1.10.0",
+    "openpyxl>=3.1.5",
+    "reportlab>=5.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.1.0",
+    "pytest-qt>=4.5.0",
+    "hypothesis>=6.160.0",
+    "coverage>=7.15.0",
+    "black>=25.0",
+    "ruff>=0.11.0",
+    "mypy>=1.15.0",
+]
+
+[tool.black]
+line-length = 100
+target-version = ["py313"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "A", "SIM", "TCH"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.13"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["app/tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
