@@ -5,8 +5,8 @@ __pycache__/
 *.so
 *.pyd
 *.egg-info/
-#dist/
-#build/
+/dist/
+/build/
 *.egg
 .eggs/
 
